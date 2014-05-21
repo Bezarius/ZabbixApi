@@ -1,0 +1,28 @@
+c:\users\nvx\documents\visual studio 2012\Projects\ZabbixApi\ZabbixApi\bin\Debug\ZabbixApi.dll
+c:\users\nvx\documents\visual studio 2012\Projects\ZabbixApi\ZabbixApi\bin\Debug\ZabbixApi.pdb
+c:\users\nvx\documents\visual studio 2012\Projects\ZabbixApi\ZabbixApi\bin\Debug\Newtonsoft.Json.dll
+c:\users\nvx\documents\visual studio 2012\Projects\ZabbixApi\ZabbixApi\bin\Debug\Newtonsoft.Json.xml
+c:\users\nvx\documents\visual studio 2012\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.csprojResolveAssemblyReference.cache
+c:\users\nvx\documents\visual studio 2012\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.dll
+c:\users\nvx\documents\visual studio 2012\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.pdb
+C:\Users\m.pavlov\Documents\Visual Studio 2012\Projects\ZabbixApi\ZabbixApi\bin\Debug\ZabbixApi.dll
+C:\Users\m.pavlov\Documents\Visual Studio 2012\Projects\ZabbixApi\ZabbixApi\bin\Debug\ZabbixApi.pdb
+C:\Users\m.pavlov\Documents\Visual Studio 2012\Projects\ZabbixApi\ZabbixApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\m.pavlov\Documents\Visual Studio 2012\Projects\ZabbixApi\ZabbixApi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\m.pavlov\Documents\Visual Studio 2012\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.csprojResolveAssemblyReference.cache
+C:\Users\m.pavlov\Documents\Visual Studio 2012\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.dll
+C:\Users\m.pavlov\Documents\Visual Studio 2012\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.pdb
+C:\Users\m.pavlov\YandexDisk\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.pdb
+C:\Users\m.pavlov\YandexDisk\Projects\ZabbixApi\ZabbixApi\bin\Debug\ZabbixApi.dll
+C:\Users\m.pavlov\YandexDisk\Projects\ZabbixApi\ZabbixApi\bin\Debug\ZabbixApi.pdb
+C:\Users\m.pavlov\YandexDisk\Projects\ZabbixApi\ZabbixApi\bin\Debug\Newtonsoft.Json.dll
+C:\Users\m.pavlov\YandexDisk\Projects\ZabbixApi\ZabbixApi\bin\Debug\Newtonsoft.Json.xml
+C:\Users\m.pavlov\YandexDisk\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.dll
+C:\Users\m.pavlov\YandexDisk\Projects\ZabbixApi\ZabbixApi\obj\Debug\ZabbixApi.csprojResolveAssemblyReference.cache
+C:\DEV\KYT2\sources\ZabbixApi\bin\Debug\ZabbixApi.dll
+C:\DEV\KYT2\sources\ZabbixApi\bin\Debug\ZabbixApi.pdb
+C:\DEV\KYT2\sources\ZabbixApi\bin\Debug\Newtonsoft.Json.dll
+C:\DEV\KYT2\sources\ZabbixApi\bin\Debug\Newtonsoft.Json.xml
+C:\DEV\KYT2\sources\ZabbixApi\obj\Debug\ZabbixApi.csprojResolveAssemblyReference.cache
+C:\DEV\KYT2\sources\ZabbixApi\obj\Debug\ZabbixApi.dll
+C:\DEV\KYT2\sources\ZabbixApi\obj\Debug\ZabbixApi.pdb

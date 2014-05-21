@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2769FD36-99CB-48F1-9437-C8D47323087B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZabbixApi</RootNamespace>
+    <AssemblyName>ZabbixApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agents\TrendsAgent.cs" />
+    <Compile Include="Common\BaseMessage.cs" />
+    <Compile Include="Common\CommonGet.cs" />
+    <Compile Include="Common\StringResponse.cs" />
+    <Compile Include="DataModel\Action\Action.cs" />
+    <Compile Include="DataModel\Action\ActionCondition.cs" />
+    <Compile Include="DataModel\Action\ActionIds.cs" />
+    <Compile Include="DataModel\Action\ActionOperation.cs" />
+    <Compile Include="DataModel\Action\ActionOperationCommand.cs" />
+    <Compile Include="DataModel\Action\ActionOperationCondition.cs" />
+    <Compile Include="DataModel\Action\ActionOperationMessage.cs" />
+    <Compile Include="DataModel\Action\Create.cs" />
+    <Compile Include="DataModel\Action\Exists.cs" />
+    <Compile Include="DataModel\Action\Get.cs" />
+    <Compile Include="DataModel\Action\Update.cs" />
+    <Compile Include="DataModel\Alert\Alert.cs" />
+    <Compile Include="DataModel\Alert\Get.cs" />
+    <Compile Include="DataModel\Application\Application.cs" />
+    <Compile Include="DataModel\Application\ApplicationIds.cs" />
+    <Compile Include="DataModel\Application\Create.cs" />
+    <Compile Include="DataModel\Application\Exists.cs" />
+    <Compile Include="DataModel\Application\Get.cs" />
+    <Compile Include="DataModel\Application\MassAdd.cs" />
+    <Compile Include="DataModel\Application\Update.cs" />
+    <Compile Include="DataModel\Common\ItemId.cs" />
+    <Compile Include="DataModel\Configuration\Export.cs" />
+    <Compile Include="DataModel\Configuration\Import.cs" />
+    <Compile Include="DataModel\Configuration\Rules.cs" />
+    <Compile Include="DataModel\DiscoveredHost\DiscoveredHost.cs" />
+    <Compile Include="DataModel\DiscoveredHost\Exists.cs" />
+    <Compile Include="DataModel\DiscoveredHost\Get.cs" />
+    <Compile Include="DataModel\DiscoveredService\DiscoveredService.cs" />
+    <Compile Include="DataModel\DiscoveredService\Exists.cs" />
+    <Compile Include="DataModel\DiscoveredService\Get.cs" />
+    <Compile Include="DataModel\DiscoveryCheck\DiscoveryCheck.cs" />
+    <Compile Include="DataModel\DiscoveryCheck\Get.cs" />
+    <Compile Include="DataModel\DiscoveryRule\Create.cs" />
+    <Compile Include="DataModel\DiscoveryRule\DiscoveryRule.cs" />
+    <Compile Include="DataModel\DiscoveryRule\DiscoveryRuleIds.cs" />
+    <Compile Include="DataModel\DiscoveryRule\Exists.cs" />
+    <Compile Include="DataModel\DiscoveryRule\Get.cs" />
+    <Compile Include="DataModel\DiscoveryRule\Update.cs" />
+    <Compile Include="DataModel\Event\Acknowlege.cs" />
+    <Compile Include="DataModel\Event\Event.cs" />
+    <Compile Include="DataModel\Event\Get.cs" />
+    <Compile Include="DataModel\Function\Function.cs" />
+    <Compile Include="DataModel\GraphItem\Get.cs" />
+    <Compile Include="DataModel\GraphPrototype\Create.cs" />
+    <Compile Include="DataModel\GraphPrototype\Exists.cs" />
+    <Compile Include="DataModel\GraphPrototype\Get.cs" />
+    <Compile Include="DataModel\GraphPrototype\GetObjects.cs" />
+    <Compile Include="DataModel\GraphPrototype\GraphPrototype.cs" />
+    <Compile Include="DataModel\GraphPrototype\Update.cs" />
+    <Compile Include="DataModel\Graph\Create.cs" />
+    <Compile Include="DataModel\Graph\Exists.cs" />
+    <Compile Include="DataModel\Graph\Get.cs" />
+    <Compile Include="DataModel\Graph\GetObjects.cs" />
+    <Compile Include="DataModel\Graph\Graph.cs" />
+    <Compile Include="DataModel\Graph\GraphIds.cs" />
+    <Compile Include="DataModel\GraphItem\GraphItem.cs" />
+    <Compile Include="DataModel\Graph\Update.cs" />
+    <Compile Include="DataModel\History\FloatHistory.cs" />
+    <Compile Include="DataModel\History\Get.cs" />
+    <Compile Include="DataModel\History\HistoryBase.cs" />
+    <Compile Include="DataModel\History\IntegerHistory.cs" />
+    <Compile Include="DataModel\History\LogHistory.cs" />
+    <Compile Include="DataModel\History\StringHistory.cs" />
+    <Compile Include="DataModel\HostGroup\Create.cs" />
+    <Compile Include="DataModel\HostGroup\Exists.cs" />
+    <Compile Include="DataModel\HostGroup\Get.cs" />
+    <Compile Include="DataModel\HostGroup\GetObjects.cs" />
+    <Compile Include="DataModel\HostGroup\HostGroup.cs" />
+    <Compile Include="DataModel\HostGroup\HostGroupIds.cs" />
+    <Compile Include="DataModel\HostGroup\MassAdd.cs" />
+    <Compile Include="DataModel\HostGroup\MassRemove.cs" />
+    <Compile Include="DataModel\HostGroup\MassUpdate.cs" />
+    <Compile Include="DataModel\HostGroup\Update.cs" />
+    <Compile Include="DataModel\HostInterface\Create.cs" />
+    <Compile Include="DataModel\HostInterface\Exists.cs" />
+    <Compile Include="DataModel\HostInterface\Get.cs" />
+    <Compile Include="DataModel\HostInterface\HostInterface.cs" />
+    <Compile Include="DataModel\HostInterface\HostInterfaceIds.cs" />
+    <Compile Include="DataModel\HostInterface\MassAdd.cs" />
+    <Compile Include="DataModel\HostInterface\MassRemove.cs" />
+    <Compile Include="DataModel\HostInterface\ReplaceHostInterfaces.cs" />
+    <Compile Include="DataModel\HostInterface\Update.cs" />
+    <Compile Include="DataModel\HostPrototype\Create.cs" />
+    <Compile Include="DataModel\HostPrototype\Get.cs" />
+    <Compile Include="DataModel\HostPrototype\GroupLink.cs" />
+    <Compile Include="DataModel\HostPrototype\GroupPrototype.cs" />
+    <Compile Include="DataModel\HostPrototype\HostPrototype.cs" />
+    <Compile Include="DataModel\HostPrototype\HostPrototypeIds.cs" />
+    <Compile Include="DataModel\HostPrototype\HostPrototypeInventory.cs" />
+    <Compile Include="DataModel\HostPrototype\Update.cs" />
+    <Compile Include="DataModel\Host\Create.cs" />
+    <Compile Include="DataModel\Common\Delete.cs" />
+    <Compile Include="DataModel\Host\Exists.cs" />
+    <Compile Include="DataModel\Host\Get.cs" />
+    <Compile Include="DataModel\Host\GetObjects.cs" />
+    <Compile Include="DataModel\Host\HostIds.cs" />
+    <Compile Include="DataModel\Host\HostInventory.cs" />
+    <Compile Include="DataModel\Host\Host.cs" />
+    <Compile Include="DataModel\Host\Update.cs" />
+    <Compile Include="DataModel\Host\MassAdd.cs" />
+    <Compile Include="DataModel\Host\MassRemove.cs" />
+    <Compile Include="DataModel\Host\MassUpdate.cs" />
+    <Compile Include="DataModel\IconMap\Create.cs" />
+    <Compile Include="DataModel\IconMap\Get.cs" />
+    <Compile Include="DataModel\IconMap\IconMap.cs" />
+    <Compile Include="DataModel\IconMap\IconMapIds.cs" />
+    <Compile Include="DataModel\IconMap\IconMapping.cs" />
+    <Compile Include="DataModel\IconMap\Update.cs" />
+    <Compile Include="DataModel\Image\Create.cs" />
+    <Compile Include="DataModel\Image\Exists.cs" />
+    <Compile Include="DataModel\Image\Get.cs" />
+    <Compile Include="DataModel\Image\GetObjects.cs" />
+    <Compile Include="DataModel\Image\Image.cs" />
+    <Compile Include="DataModel\Image\ImageIds.cs" />
+    <Compile Include="DataModel\Image\Update.cs" />
+    <Compile Include="DataModel\ItemPrototype\Create.cs" />
+    <Compile Include="DataModel\ItemPrototype\Exists.cs" />
+    <Compile Include="DataModel\ItemPrototype\Get.cs" />
+    <Compile Include="DataModel\ItemPrototype\ItemPrototype.cs" />
+    <Compile Include="DataModel\ItemPrototype\ItemPrototypeIds.cs" />
+    <Compile Include="DataModel\ItemPrototype\Update.cs" />
+    <Compile Include="DataModel\Item\Create.cs" />
+    <Compile Include="DataModel\Item\Exists.cs" />
+    <Compile Include="DataModel\Item\Get.cs" />
+    <Compile Include="DataModel\Item\GetObjects.cs" />
+    <Compile Include="DataModel\Item\Item.cs" />
+    <Compile Include="DataModel\Item\ItemIds.cs" />
+    <Compile Include="DataModel\Item\Update.cs" />
+    <Compile Include="DataModel\ITService\AddDependencies.cs" />
+    <Compile Include="DataModel\ITService\AddTimes.cs" />
+    <Compile Include="DataModel\ITService\Create.cs" />
+    <Compile Include="DataModel\ITService\DeleteDependencies.cs" />
+    <Compile Include="DataModel\ITService\DeleteTimes.cs" />
+    <Compile Include="DataModel\ITService\Get.cs" />
+    <Compile Include="DataModel\ITService\GetSLA.cs" />
+    <Compile Include="DataModel\ITService\ITService.cs" />
+    <Compile Include="DataModel\ITService\ITServiceInfo.cs" />
+    <Compile Include="DataModel\ITService\ServiceAlarm.cs" />
+    <Compile Include="DataModel\ITService\ServiceDependency.cs" />
+    <Compile Include="DataModel\ITService\ServiceIds.cs" />
+    <Compile Include="DataModel\ITService\ServiceTime.cs" />
+    <Compile Include="DataModel\ITService\SLA.cs" />
+    <Compile Include="DataModel\ITService\Update.cs" />
+    <Compile Include="DataModel\LLDRule\Copy.cs" />
+    <Compile Include="DataModel\LLDRule\Create.cs" />
+    <Compile Include="DataModel\LLDRule\Exists.cs" />
+    <Compile Include="DataModel\LLDRule\Get.cs" />
+    <Compile Include="DataModel\LLDRule\ItemIds.cs" />
+    <Compile Include="DataModel\LLDRule\LLDRule.cs" />
+    <Compile Include="DataModel\LLDRule\Update.cs" />
+    <Compile Include="DataModel\Maintenance\Create.cs" />
+    <Compile Include="DataModel\Maintenance\Exists.cs" />
+    <Compile Include="DataModel\Maintenance\Get.cs" />
+    <Compile Include="DataModel\Maintenance\Maintenance.cs" />
+    <Compile Include="DataModel\Maintenance\MaintenanceIds.cs" />
+    <Compile Include="DataModel\Maintenance\TimePeriod.cs" />
+    <Compile Include="DataModel\Maintenance\Update.cs" />
+    <Compile Include="DataModel\Map\Create.cs" />
+    <Compile Include="DataModel\Map\Exists.cs" />
+    <Compile Include="DataModel\Map\Get.cs" />
+    <Compile Include="DataModel\Map\GetObjects.cs" />
+    <Compile Include="DataModel\Map\Map.cs" />
+    <Compile Include="DataModel\Map\MapElement.cs" />
+    <Compile Include="DataModel\Map\MapElementURL.cs" />
+    <Compile Include="DataModel\Map\MapIds.cs" />
+    <Compile Include="DataModel\Map\MapLink.cs" />
+    <Compile Include="DataModel\Map\MapLinkTrigger.cs" />
+    <Compile Include="DataModel\Map\MapURL.cs" />
+    <Compile Include="DataModel\Map\Update.cs" />
+    <Compile Include="DataModel\MediaType\Create.cs" />
+    <Compile Include="DataModel\MediaType\Get.cs" />
+    <Compile Include="DataModel\MediaType\MediaType.cs" />
+    <Compile Include="DataModel\MediaType\MediaTypeIds.cs" />
+    <Compile Include="DataModel\MediaType\Update.cs" />
+    <Compile Include="DataModel\Media\Get.cs" />
+    <Compile Include="DataModel\Media\Media.cs" />
+    <Compile Include="DataModel\Media\MediaIds.cs" />
+    <Compile Include="DataModel\Proxy\Create.cs" />
+    <Compile Include="DataModel\Proxy\Get.cs" />
+    <Compile Include="DataModel\Proxy\Proxy.cs" />
+    <Compile Include="DataModel\Proxy\ProxyIds.cs" />
+    <Compile Include="DataModel\Proxy\ProxyInterface.cs" />
+    <Compile Include="DataModel\Proxy\Update.cs" />
+    <Compile Include="DataModel\ScreenItem\Create.cs" />
+    <Compile Include="DataModel\ScreenItem\Get.cs" />
+    <Compile Include="DataModel\ScreenItem\ScreenItem.cs" />
+    <Compile Include="DataModel\ScreenItem\ScreenItemIds.cs" />
+    <Compile Include="DataModel\ScreenItem\Update.cs" />
+    <Compile Include="DataModel\ScreenItem\UpdateByPosition.cs" />
+    <Compile Include="DataModel\Screen\Create.cs" />
+    <Compile Include="DataModel\Screen\Exists.cs" />
+    <Compile Include="DataModel\Screen\Get.cs" />
+    <Compile Include="DataModel\Screen\Screen.cs" />
+    <Compile Include="DataModel\Screen\ScreenIds.cs" />
+    <Compile Include="DataModel\Screen\Update.cs" />
+    <Compile Include="DataModel\Script\Create.cs" />
+    <Compile Include="DataModel\Script\Execute.cs" />
+    <Compile Include="DataModel\Script\ExecuteResponse.cs" />
+    <Compile Include="DataModel\Script\Get.cs" />
+    <Compile Include="DataModel\Script\GetScriptsByHosts.cs" />
+    <Compile Include="DataModel\Script\GetScriptsByHostsResponse.cs" />
+    <Compile Include="DataModel\Script\Script.cs" />
+    <Compile Include="DataModel\Script\ScriptIds.cs" />
+    <Compile Include="DataModel\Script\Update.cs" />
+    <Compile Include="DataModel\TemplateScreenItem\Get.cs" />
+    <Compile Include="DataModel\TemplateScreenItem\TemplateScreenItem.cs" />
+    <Compile Include="DataModel\TemplateScreenItem\TemplateScreenItemIds.cs" />
+    <Compile Include="DataModel\TemplateScreen\Copy.cs" />
+    <Compile Include="DataModel\TemplateScreen\Create.cs" />
+    <Compile Include="DataModel\TemplateScreen\Exists.cs" />
+    <Compile Include="DataModel\TemplateScreen\Get.cs" />
+    <Compile Include="DataModel\TemplateScreen\TemplateScreen.cs" />
+    <Compile Include="DataModel\TemplateScreen\TemplateScreenIds.cs" />
+    <Compile Include="DataModel\TemplateScreen\Update.cs" />
+    <Compile Include="DataModel\Trends\Get.cs" />
+    <Compile Include="DataModel\Trends\Trend.cs" />
+    <Compile Include="DataModel\TriggerPrototype\Create.cs" />
+    <Compile Include="DataModel\TriggerPrototype\Get.cs" />
+    <Compile Include="DataModel\TriggerPrototype\TriggerPrototype.cs" />
+    <Compile Include="DataModel\TriggerPrototype\TriggerPrototypeIds.cs" />
+    <Compile Include="DataModel\TriggerPrototype\Update.cs" />
+    <Compile Include="DataModel\UserGroup\Create.cs" />
+    <Compile Include="DataModel\UserGroup\Exists.cs" />
+    <Compile Include="DataModel\UserGroup\Get.cs" />
+    <Compile Include="DataModel\UserGroup\GetObjects.cs" />
+    <Compile Include="DataModel\UserGroup\MassAdd.cs" />
+    <Compile Include="DataModel\UserGroup\MassUpdate.cs" />
+    <Compile Include="DataModel\UserGroup\Permission.cs" />
+    <Compile Include="DataModel\UserGroup\Update.cs" />
+    <Compile Include="DataModel\UserGroup\UserGroup.cs" />
+    <Compile Include="DataModel\UserGroup\UserGroupIds.cs" />
+    <Compile Include="DataModel\UserMacro\Create.cs" />
+    <Compile Include="DataModel\UserMacro\CreateGlobal.cs" />
+    <Compile Include="DataModel\UserMacro\Get.cs" />
+    <Compile Include="DataModel\UserMacro\GlobalMacro.cs" />
+    <Compile Include="DataModel\UserMacro\HostMacro.cs" />
+    <Compile Include="DataModel\Template\Create.cs" />
+    <Compile Include="DataModel\Template\Exists.cs" />
+    <Compile Include="DataModel\Template\Get.cs" />
+    <Compile Include="DataModel\Template\GetObjects.cs" />
+    <Compile Include="DataModel\Template\MassAdd.cs" />
+    <Compile Include="DataModel\Template\MassRemove.cs" />
+    <Compile Include="DataModel\Template\MassUpdate.cs" />
+    <Compile Include="DataModel\Template\Update.cs" />
+    <Compile Include="DataModel\Template\Template.cs" />
+    <Compile Include="DataModel\Template\TemplateIds.cs" />
+    <Compile Include="DataModel\Trigger\AddDependencies.cs" />
+    <Compile Include="DataModel\Trigger\TriggerIds.cs" />
+    <Compile Include="DataModel\Trigger\Trigger.cs" />
+    <Compile Include="DataModel\Trigger\Create.cs" />
+    <Compile Include="DataModel\Trigger\DeleteDependencies.cs" />
+    <Compile Include="DataModel\Trigger\Exists.cs" />
+    <Compile Include="DataModel\Trigger\GetObjects.cs" />
+    <Compile Include="DataModel\Common\IsReadable.cs" />
+    <Compile Include="DataModel\Common\IsWritable.cs" />
+    <Compile Include="DataModel\Trigger\Update.cs" />
+    <Compile Include="Common\DataProvider.cs" />
+    <Compile Include="DataModel\UserMacro\HostMacroIds.cs" />
+    <Compile Include="DataModel\UserMacro\Update.cs" />
+    <Compile Include="DataModel\UserMacro\UpdateGlobal.cs" />
+    <Compile Include="DataModel\User\AddMedia.cs" />
+    <Compile Include="DataModel\User\Create.cs" />
+    <Compile Include="DataModel\User\Get.cs" />
+    <Compile Include="DataModel\User\Login.cs" />
+    <Compile Include="DataModel\User\LoginResponse.cs" />
+    <Compile Include="DataModel\User\Update.cs" />
+    <Compile Include="DataModel\User\UpdateMedia.cs" />
+    <Compile Include="DataModel\User\UpdateProfile.cs" />
+    <Compile Include="DataModel\User\User.cs" />
+    <Compile Include="DataModel\User\UserIds.cs" />
+    <Compile Include="DataModel\WebScenario\Create.cs" />
+    <Compile Include="DataModel\WebScenario\Get.cs" />
+    <Compile Include="DataModel\WebScenario\ScenarioStep.cs" />
+    <Compile Include="DataModel\WebScenario\Update.cs" />
+    <Compile Include="DataModel\WebScenario\WebScenario.cs" />
+    <Compile Include="DataModel\WebScenario\WebScenarioIds.cs" />
+    <Compile Include="DataProviders\ActionProvider.cs" />
+    <Compile Include="DataProviders\AlertProvider.cs" />
+    <Compile Include="DataProviders\ApplicationProvider.cs" />
+    <Compile Include="DataProviders\ConfigurationProvider.cs" />
+    <Compile Include="DataProviders\GraphPrototypeProvider.cs" />
+    <Compile Include="DataProviders\DiscoveredHostProvider.cs" />
+    <Compile Include="DataProviders\DiscoveredServiceProvider.cs" />
+    <Compile Include="DataProviders\DiscoveryCheckProvider.cs" />
+    <Compile Include="DataProviders\DiscoveryRuleProvider.cs" />
+    <Compile Include="DataProviders\EventProvider.cs" />
+    <Compile Include="DataProviders\GraphItemProvider.cs" />
+    <Compile Include="DataProviders\GraphProvider.cs" />
+    <Compile Include="DataProviders\HistoryProvider.cs" />
+    <Compile Include="DataProviders\HostGroupProvider.cs" />
+    <Compile Include="DataProviders\HostInterfaceProvider.cs" />
+    <Compile Include="DataProviders\HostPrototypeProvider.cs" />
+    <Compile Include="DataProviders\HostProvider.cs" />
+    <Compile Include="DataProviders\IconMapProvider.cs" />
+    <Compile Include="DataProviders\ImageProvider.cs" />
+    <Compile Include="DataProviders\ItemPrototypeProvider.cs" />
+    <Compile Include="DataProviders\ItemProvider.cs" />
+    <Compile Include="DataProviders\ITServiceProvider.cs" />
+    <Compile Include="DataProviders\LLDRuleProvider.cs" />
+    <Compile Include="DataProviders\MaintenanceProvider.cs" />
+    <Compile Include="DataProviders\MapProvider.cs" />
+    <Compile Include="DataProviders\MediaProvider.cs" />
+    <Compile Include="DataProviders\MediaTypeProvider.cs" />
+    <Compile Include="DataProviders\ProxyProvider.cs" />
+    <Compile Include="DataProviders\ScreenItemProvider.cs" />
+    <Compile Include="DataProviders\ScreenProvider.cs" />
+    <Compile Include="DataProviders\ScriptProvider.cs" />
+    <Compile Include="DataProviders\TemplateProvider.cs" />
+    <Compile Include="DataProviders\TemplateScreenItemProvider.cs" />
+    <Compile Include="DataProviders\TemplateScreenProvider.cs" />
+    <Compile Include="DataProviders\TrendsProvider.cs" />
+    <Compile Include="DataProviders\TriggerPrototypeProvider.cs" />
+    <Compile Include="DataProviders\UserGroupProvider.cs" />
+    <Compile Include="DataProviders\UserMacroProvider.cs" />
+    <Compile Include="DataProviders\UserProvider.cs" />
+    <Compile Include="DataProviders\WebScenarioProvider.cs" />
+    <Compile Include="Helpers\EnumExtension.cs" />
+    <Compile Include="Helpers\UnixTime.cs" />
+    <Compile Include="Agents\ActionAgent.cs" />
+    <Compile Include="Agents\AlertAgent.cs" />
+    <Compile Include="Agents\ApplicationAgent.cs" />
+    <Compile Include="Agents\ConfigurationAgent.cs" />
+    <Compile Include="Agents\DiscoveredCheckAgent.cs" />
+    <Compile Include="Agents\DiscoveredHostAgent.cs" />
+    <Compile Include="Agents\DiscoveredServiceAgent.cs" />
+    <Compile Include="Agents\DiscoveryRuleAgent.cs" />
+    <Compile Include="Agents\EventAgent.cs" />
+    <Compile Include="Agents\GraphItemAgent.cs" />
+    <Compile Include="Agents\GraphPrototypeAgent.cs" />
+    <Compile Include="Agents\GraphAgent.cs" />
+    <Compile Include="Agents\MacrosAgent.cs" />
+    <Compile Include="Agents\UserGroupAgent.cs" />
+    <Compile Include="Agents\HistoryAgent.cs" />
+    <Compile Include="Agents\HostGroupAgent.cs" />
+    <Compile Include="Agents\HostInterfaceAgent.cs" />
+    <Compile Include="Agents\HostPrototypeAgent.cs" />
+    <Compile Include="Agents\HostAgent.cs" />
+    <Compile Include="Agents\IconMapAgent.cs" />
+    <Compile Include="Agents\ImageAgent.cs" />
+    <Compile Include="Agents\ItemPrototypeAgent.cs" />
+    <Compile Include="Agents\ItemAgent.cs" />
+    <Compile Include="Agents\ITServiceAgent.cs" />
+    <Compile Include="Agents\LLDRuleAgent.cs" />
+    <Compile Include="Agents\MaintenanceAgent..cs" />
+    <Compile Include="Agents\MapAgent.cs" />
+    <Compile Include="Agents\MediaAgent.cs" />
+    <Compile Include="Agents\MediaTypeAgent.cs" />
+    <Compile Include="Agents\ProxyAgent.cs" />
+    <Compile Include="Agents\ScreenAgent.cs" />
+    <Compile Include="Agents\ScreenItemAgent.cs" />
+    <Compile Include="Agents\ScriptAgent.cs" />
+    <Compile Include="Agents\TemplateAgent.cs" />
+    <Compile Include="Agents\TemplateScreenAgent.cs" />
+    <Compile Include="Agents\TemplateScreenItemAgent.cs" />
+    <Compile Include="Agents\TriggerAgent.cs" />
+    <Compile Include="DataModel\Trigger\Get.cs" />
+    <Compile Include="Common\Error.cs" />
+    <Compile Include="Common\BaseResponse.cs" />
+    <Compile Include="DataProviders\TriggerProvider.cs" />
+    <Compile Include="Agents\TriggerPrototypeAgent.cs" />
+    <Compile Include="Agents\UserAgent.cs" />
+    <Compile Include="Agents\WebScenarioAgent.cs" />
+    <Compile Include="ZabbixClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,7 @@
+C:\DEV\KYT2\sources\ZabbixApi\bin\Release\ZabbixApi.dll
+C:\DEV\KYT2\sources\ZabbixApi\bin\Release\ZabbixApi.pdb
+C:\DEV\KYT2\sources\ZabbixApi\bin\Release\Newtonsoft.Json.dll
+C:\DEV\KYT2\sources\ZabbixApi\bin\Release\Newtonsoft.Json.xml
+C:\DEV\KYT2\sources\ZabbixApi\obj\Release\ZabbixApi.csprojResolveAssemblyReference.cache
+C:\DEV\KYT2\sources\ZabbixApi\obj\Release\ZabbixApi.dll
+C:\DEV\KYT2\sources\ZabbixApi\obj\Release\ZabbixApi.pdb
